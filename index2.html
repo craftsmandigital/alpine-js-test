@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hello Bulma!</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
+    />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v1.9.7/dist/alpine.js"
+      defer
+    ></script>
+    <script>
+    function dropdown() {
+        return {
+            show: false,
+            open() { this.show = true },
+            close() { this.show = false },
+            isOpen() { return this.show === true },
+        }
+    }
+</script>
+  </head>
+  <body>
+    <section class="section">
+      <div class="container">
+        <div class="content">
+<div x-data="dropdown()">
+    <button x-on:click="open()">Open</button>
+
+    <div x-show="isOpen()" x-on:click.away="close()">
+        // Dropdown
+    </div>
+</div>
+<div x-data="{ open: false }">
+    <button
+        @mouseenter.once="
+            fetch('/dropdown-partial.html')
+                .then(response => response.text())
+                .then(html => { $refs.dropdown.innerHTML = html })
+        "
+        @click="open = true"
+    >Show Dropdown</button>
+
+    <div x-ref="dropdown" x-show="open" @click.away="open = false">
+        Loading Spinner...
+    </div>
+</div>
+          <div x-data="{ tab: 'foo' }">
+            <button :class="{ 'active': tab === 'foo' }" @click="tab = 'foo'">
+              Foo
+            </button>
+            <button :class="{ 'active': tab === 'bar' }" @click="tab = 'bar'">
+              Bar
+            </button>
+
+            <div x-show="tab === 'foo'">Tab Foo</div>
+            <div x-show="tab === 'bar'">Tab Bar</div>
+          </div>
+          <div x-data="{ open: false }">
+            <button @click="open = true">Open Dropdown</button>
+
+            <ul x-show="open" @click.away="open = false">
+              Dropdown Body
+            </ul>
+          </div>
+        </div>
+        <h1 class="title">
+          Hello World
+        </h1>
+        <p class="subtitle"><a href="https://github.com/alpinejs/alpine">Her er Alpine js</a></p>
+      </div>
+    </section>
+  </body>
+</html>

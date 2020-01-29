@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hello Alpine js!</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
+    />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v1.9.7/dist/alpine.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <section class="section">
+      <div class="container">
+
+
+
+        <div x-data="{ tab: 'pictures' }">
+        <div class="tabs is-centered is-boxed">
+
+          <ul>
+            <li :class="{ 'is-active': tab === 'pictures' }" @click="tab = 'pictures'"><a>Tab Pictures</a></li>
+            <li :class="{ 'is-active': tab === 'music' }" @click="tab = 'music'"><a>Tab Music</a></li>
+            <li :class="{ 'is-active': tab === 'videos' }" @click="tab = 'videos'"><a>Tab Videos</a></li>
+            <li :class="{ 'is-active': tab === 'doc' }" @click="tab = 'doc'"><a>Tab Documents</a></lia>
+          </ul>
+        </div>
+          <div x-show="tab === 'pictures'">Tab Pictures<br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet nostrum dolorum eius qui sunt minus ratione ab, ea corporis iure non similique dicta, odio inventore reprehenderit? Vitae nisi rerum officiis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel cumque dolor doloribus officia sint totam adipisci minima vitae, ducimus nam temporibus officiis, quis labore eaque maiores. Sunt laudantium eius animi.</div>
+          <div x-show="tab === 'music'">Tab Music <br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa asperiores porro sapiente ut voluptas eum aliquam quaerat laudantium rerum quo, quis, dicta obcaecati soluta natus odit incidunt quidem inventore a. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam qui, commodi labore nulla vitae voluptatem repudiandae fuga. Debitis dolorum repudiandae eligendi cum, non doloribus ipsa, quas praesentium rem nostrum voluptatibus? 10 Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero laudantium eaque corrupti, dignissimos eveniet delectus magnam optio deleniti rerum, laboriosam nisi voluptatum animi et debitis iste rem quod sed perspiciatis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste perferendis rem minus nobis quae error dolor, numquam dolore atque pariatur porro neque deleniti tempora reprehenderit nemo quod? Suscipit, modi impedit! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam maiores voluptas nesciunt sapiente, exercitationem molestias asperiores dicta, modi accusantium reprehenderit ab, nulla nemo quod amet alias aut deserunt esse. Aliquid? Nemo accusamus fugit et asperiores soluta possimus consectetur suscipit magnam modi, culpa temporibus sit ab reiciendis beatae molestias excepturi a. Possimus, nobis!</div>
+          <div x-show="tab === 'videos'">Tab Videos <br> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda nesciunt neque consequuntur recusandae sed, autem eius ratione fuga? Iusto impedit repellat at itaque culpa! Cum repellat reiciendis maiores! Temporibus, qui. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos nihil facere in repudiandae corporis harum atque iure a similique mollitia quaerat ut voluptas voluptatum, totam fugiat optio provident nam natus.</div>
+          <div x-show="tab === 'doc'">Tab Documents <br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia sapiente totam aliquam est illo, similique dolorum fugit commodi labore mollitia reprehenderit dolorem nisi doloribus id, delectus possimus consequatur ad harum?</div>
+        </div>
+
+
+
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <div x-data="{ tab: 'foo' }">
+          <button :class="{ 'active': tab === 'foo' }" @click="tab = 'foo'">
+            Foo
+          </button>
+          <button :class="{ 'active': tab === 'bar' }" @click="tab = 'bar'">
+            Bar
+          </button>
+
+          <div x-show="tab === 'foo'">Tab Foo</div>
+          <div x-show="tab === 'bar'">Tab Bar</div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
