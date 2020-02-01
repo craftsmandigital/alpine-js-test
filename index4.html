@@ -20,14 +20,9 @@
   <body>
     <section class="section">
       <div class="container">
-        
-        
-        
-        
-        
-        
-        <h2 class="title"><a href="https://github.com/alpinejs/alpine">Playing with alpinejs from this page</a></h2>
-        <h2 class="is-size-3">Tab test with focus</h2>
+
+
+
         <div x-data="{ tab: 'pictures' }">
         <div class="tabs is-centered is-boxed">
 
@@ -51,9 +46,7 @@
         <br />
         <br />
 
-        <h2 class="is-size-3">Orginal code from the alpinejs site</h2>
         <div x-data="{ tab: 'foo' }">
-          
           <button :class="{ 'active': tab === 'foo' }" @click="tab = 'foo'">
             Foo
           </button>
@@ -64,27 +57,6 @@
           <div x-show="tab === 'foo'">Tab Foo</div>
           <div x-show="tab === 'bar'">Tab Bar</div>
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <h2 class="is-size-3">Tab test with no focus and changed tab id (mytab)</h2>
-        <div x-data="{ mytab: 'pictures' }">
-        <div class="tabs is-centered is-boxed">
-
-          <ul>
-            <li @click="mytab = 'pictures'"><a>Tab Pictures</a></li>
-            <li @click="mytab = 'music'"><a>Tab Music</a></li>
-            <li @click="mytab = 'videos'"><a>Tab Videos</a></li>
-            <li @click="mytab = 'doc'"><a>Tab Documents</a></lia>
-          </ul>
-        </div>
-          <div x-show="mytab === 'pictures'">Tab Pictures<br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet nostrum dolorum eius qui sunt minus ratione ab, ea corporis iure non similique dicta, odio inventore reprehenderit? Vitae nisi rerum officiis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel cumque dolor doloribus officia sint totam adipisci minima vitae, ducimus nam temporibus officiis, quis labore eaque maiores. Sunt laudantium eius animi.</div>
-          <div x-show="mytab === 'music'">Tab Music <br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa asperiores porro sapiente ut voluptas eum aliquam quaerat laudantium rerum quo, quis, dicta obcaecati soluta natus odit incidunt quidem inventore a. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam qui, commodi labore nulla vitae voluptatem repudiandae fuga. Debitis dolorum repudiandae eligendi cum, non doloribus ipsa, quas praesentium rem nostrum voluptatibus? 10 Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero laudantium eaque corrupti, dignissimos eveniet delectus magnam optio deleniti rerum, laboriosam nisi voluptatum animi et debitis iste rem quod sed perspiciatis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste perferendis rem minus nobis quae error dolor, numquam dolore atque pariatur porro neque deleniti tempora reprehenderit nemo quod? Suscipit, modi impedit! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam maiores voluptas nesciunt sapiente, exercitationem molestias asperiores dicta, modi accusantium reprehenderit ab, nulla nemo quod amet alias aut deserunt esse. Aliquid? Nemo accusamus fugit et asperiores soluta possimus consectetur suscipit magnam modi, culpa temporibus sit ab reiciendis beatae molestias excepturi a. Possimus, nobis!</div>
-          <div x-show="mytab === 'videos'">Tab Videos <br> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda nesciunt neque consequuntur recusandae sed, autem eius ratione fuga? Iusto impedit repellat at itaque culpa! Cum repellat reiciendis maiores! Temporibus, qui. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos nihil facere in repudiandae corporis harum atque iure a similique mollitia quaerat ut voluptas voluptatum, totam fugiat optio provident nam natus.</div>
-          <div x-show="mytab === 'doc'">Tab Documents <br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia sapiente totam aliquam est illo, similique dolorum fugit commodi labore mollitia reprehenderit dolorem nisi doloribus id, delectus possimus consequatur ad harum?</div>
       </div>
     </section>
   </body>
